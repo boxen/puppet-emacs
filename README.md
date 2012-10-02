@@ -1,4 +1,9 @@
-# Puppet emacs for Boxen
+# Emacs Puppet Module for Boxen
 
-FIXME: update me bro
+Requires the `boxen` puppet module.
 
+## Usage
+
+```puppet
+include emacs
+```

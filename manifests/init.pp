@@ -1,13 +1,13 @@
 class emacs {
-  $version = '24.1-github1'
+  $version = '24.1-boxen1'
 
-  package { 'github/brews/emacs':
+  package { 'boxen/brews/emacs':
     ensure => $version
   }
 
   file { "/Applications/Emacs.app":
     ensure  => link,
     target  => "${homebrew::dir}/Cellar/${version}/Emacs.app",
-    require => Package['github/brews/emacs']
+    require => Package['boxen/brews/emacs']
   }
 }
