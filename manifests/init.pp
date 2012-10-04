@@ -1,4 +1,6 @@
 class emacs {
+  require homebrew
+
   $version = '24.1-boxen1'
 
   package { 'boxen/brews/emacs':
