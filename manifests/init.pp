@@ -12,7 +12,7 @@ class emacs {
     ensure => $version
   }
 
-  file { "/Applications/Emacs.app":
+  file { '/Applications/Emacs.app':
     ensure  => link,
     target  => "${homebrew::dir}/Cellar/${version}/Emacs.app",
     require => Package['boxen/brews/emacs']
