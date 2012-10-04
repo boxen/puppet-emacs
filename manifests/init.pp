@@ -1,3 +1,8 @@
+# Public: Install Emacs.app from homebrew into /Applications.
+#
+# Examples
+#
+#   include emacs
 class emacs {
   require homebrew
 
