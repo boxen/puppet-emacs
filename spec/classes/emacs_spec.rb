@@ -10,7 +10,7 @@ describe 'emacs' do
   it do
     should contain_file('/Applications/Emacs.app').with({
       :ensure  => 'link',
-      :target  => "/opt/boxen/homebrew/Cellar/#{version}/Emacs.app",
+      :target  => "/opt/boxen/homebrew/Cellar/emacs/#{version}/Emacs.app",
       :require => 'Package[boxen/brews/emacs]',
     })
   end

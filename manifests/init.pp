@@ -14,7 +14,7 @@ class emacs {
 
   file { '/Applications/Emacs.app':
     ensure  => link,
-    target  => "${homebrew::dir}/Cellar/emacs/${version}/Emacs.app",
+    target  => "${homebrew::config::installdir}/Cellar/emacs/${version}/Emacs.app",
     require => Package['boxen/brews/emacs']
   }
 }
