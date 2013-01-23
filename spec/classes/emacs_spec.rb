@@ -7,7 +7,7 @@ describe 'emacs' do
   it do
     should include_class('homebrew')
 
-    should include_homebrew__formula('emacs')
+    should contain_homebrew__formula('emacs')
 
     should contain_package('boxen/brews/emacs').with_ensure(version)
 
