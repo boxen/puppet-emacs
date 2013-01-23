@@ -4,9 +4,11 @@
 #
 #   include emacs
 class emacs {
-  require homebrew
-
   $version = '24.1-boxen1'
+
+  homebrew::formula { 'emacs':
+    before => Package['boxen/brews/emacs'] ;
+  }
 
   package { 'boxen/brews/emacs':
     ensure => $version
