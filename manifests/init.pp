@@ -4,6 +4,8 @@
 #
 #   include emacs
 class emacs {
+  require homebrew
+
   $version = '24.1-boxen1'
 
   homebrew::formula { 'emacs':
@@ -14,9 +16,11 @@ class emacs {
     ensure => $version
   }
 
+  $target = "${homebrew::config::installdir}/Cellar/emacs/${version}/Emacs.app"
+
   file { '/Applications/Emacs.app':
     ensure  => link,
-    target  => "${homebrew::config::installdir}/Cellar/emacs/${version}/Emacs.app",
+    target  => $target,
     require => Package['boxen/brews/emacs']
   }
 }
