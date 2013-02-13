@@ -3,7 +3,7 @@
 Install [GNU Emacs](http://www.gnu.org/software/emacs), an operating
 system desperately searching for a decent editor.
 
- ## Usage
+## Usage
 
 ```puppet
 include emacs
