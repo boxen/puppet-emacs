@@ -6,7 +6,7 @@ class Emacs < Formula
   mirror 'http://ftp.gnu.org/pub/gnu/emacs/emacs-24.2.tar.bz2'
   sha1 '38e8fbc9573b70a123358b155cf55c274b5a56cf'
 
-  version "24.2-boxen1"
+  version "24.2-boxen2"
 
   option "cocoa", "Build a Cocoa version of emacs"
   option "srgb", "Enable sRGB colors in the Cocoa version of emacs"
@@ -28,7 +28,7 @@ class Emacs < Formula
   end
 
   def patches
-    # Fullscreen patch works against 24.2; already included in HEAD
+    # Fullscreen patch works against 24.2; already included in 24.3+
     if build.include? "cocoa" and not build.head?
       "https://raw.github.com/gist/1746342/702dfe9e2dd79fddd536aa90d561efdeec2ba716"
     end
