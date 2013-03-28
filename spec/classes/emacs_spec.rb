@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'emacs' do
-  let(:version) { '24.2-boxen1' }
+  let(:version) { '24.2-boxen2' }
   let(:facts) { { :boxen_home => '/opt/boxen' } }
 
   it do
