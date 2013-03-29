@@ -20,6 +20,10 @@ class Emacs < Formula
     head 'bzr://http://bzr.savannah.gnu.org/r/emacs/trunk'
   end
 
+  if build.head? or build.include? "cocoa"
+    depends_on :autoconf
+    depends_on :automake
+  end
   depends_on :x11 if build.include? "with-x"
 
   fails_with :llvm do
