@@ -6,7 +6,7 @@
 class emacs {
   require homebrew
 
-  $version = '24.2-boxen1'
+  $version = '24.3-boxen1'
 
   homebrew::formula { 'emacs':
     before => Package['boxen/brews/emacs'] ;
