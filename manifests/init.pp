@@ -3,7 +3,9 @@
 # Examples
 #
 #   include emacs
-class emacs {
+class emacs(
+  $install_options = ['--cocoa'],
+  ) {
   require homebrew
 
   $version = '24.3-boxen2'
@@ -14,7 +16,7 @@ class emacs {
 
   package { 'boxen/brews/emacs':
     ensure          => $version,
-    install_options => ['--cocoa'],
+    install_options => $install_options,
   }
 
   $target = "${homebrew::config::installdir}/Cellar/emacs/${version}/Emacs.app"
