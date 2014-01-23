@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe 'emacs' do
-  let(:version) { '24.3-boxen2' }
+  let(:version) { '24.3-boxen3' }
+  let(:install_options) { [ '--cocoa' ] }
   let(:facts) { { :boxen_home => '/opt/boxen' } }
 
   it do
@@ -11,7 +12,7 @@ describe 'emacs' do
 
     should contain_package('boxen/brews/emacs').with({
       :ensure          => version,
-      :install_options => [ '--cocoa' ]
+      :install_options => install_options,
     })
 
     should contain_file('/Applications/Emacs.app').with({
