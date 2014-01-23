@@ -1,7 +1,10 @@
 # Emacs Puppet Module for Boxen
 
-Install [GNU Emacs](http://www.gnu.org/software/emacs), an operating
-system desperately searching for a decent editor.
+[![Build Status](https://travis-ci.org/boxen/puppet-emacs.png?branch=master)](https://travis-ci.org/boxen/puppet-emacs)
+
+Install [GNU Emacs](http://www.gnu.org/software/emacs), an extensible,
+customizable text editor, implemented in Lisp. May also contain an
+operating system.
 
 ## Usage
 
