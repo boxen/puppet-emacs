@@ -3,12 +3,13 @@
 # Examples
 #
 #   include emacs
+
 class emacs(
-  $install_options = ['--cocoa'],
+  $install_options = [ '--cocoa' ],
   ) {
   require homebrew
 
-  $version = '24.3-boxen2'
+  $version = '24.3-boxen3'
 
   homebrew::formula { 'emacs':
     before => Package['boxen/brews/emacs'] ;
