@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'emacs' do
-  let(:version) { '24.3-boxen3' }
+  let(:version) { '24.3-boxen4' }
   let(:install_options) { [ '--cocoa' ] }
   let(:facts) { { :boxen_home => '/opt/boxen' } }
 
